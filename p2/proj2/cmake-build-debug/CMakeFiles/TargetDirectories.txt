@@ -1,0 +1,4 @@
+/Users/junsi/Desktop/VE281/project/p2/proj2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/junsi/Desktop/VE281/project/p2/proj2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/junsi/Desktop/VE281/project/p2/proj2/cmake-build-debug/CMakeFiles/test.dir
+/Users/junsi/Desktop/VE281/project/p2/proj2/cmake-build-debug/CMakeFiles/proj2.dir

@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/junsi/Desktop/VE281/project/p2/proj2/hash_prime.hpp
+utility
+-
+
+/Users/junsi/Desktop/VE281/project/p2/proj2/hashtable.hpp
+hash_prime.hpp
+/Users/junsi/Desktop/VE281/project/p2/proj2/hash_prime.hpp
+exception
+-
+functional
+-
+vector
+-
+forward_list
+-
+cmath
+-
+
+/Users/junsi/Desktop/VE281/project/p2/proj2/main.cpp
+iostream
+-
+hashtable.hpp
+/Users/junsi/Desktop/VE281/project/p2/proj2/hashtable.hpp
+
