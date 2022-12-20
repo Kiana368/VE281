@@ -1,0 +1,4 @@
+/Users/junsi/Desktop/VE281/作业/Homework 1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/junsi/Desktop/VE281/作业/Homework 1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/junsi/Desktop/VE281/作业/Homework 1/cmake-build-debug/CMakeFiles/test.dir
+/Users/junsi/Desktop/VE281/作业/Homework 1/cmake-build-debug/CMakeFiles/hw1.dir

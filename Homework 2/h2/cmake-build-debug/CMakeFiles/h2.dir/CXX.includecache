@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/junsi/Desktop/VE281/作业/Homework 2/h2/hash.cpp
+hashtable.h
+/Users/junsi/Desktop/VE281/作业/Homework 2/h2/hashtable.h
+string
+-
+iostream
+-
+
+/Users/junsi/Desktop/VE281/作业/Homework 2/h2/hashtable.h
+cstdint
+-
+functional
+-
+vector
+-
+cassert
+-
+iostream
+-
+

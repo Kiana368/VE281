@@ -1,0 +1,282 @@
+\documentclass[11pt]{exam}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts, amsmath, amssymb, amsthm}
+\usepackage{mathtools}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{colortbl}
+\usepackage{float}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+
+% in order to compile this file you need to get 'header.tex' from
+% Canvas and change the line below to the appropriate file path
+\input{header}
+
+\geometry{left=2.5 cm,right=2.5 cm,top=2.5 cm,bottom=2.5 cm}
+%\pagestyle{fancy}
+\definecolor{mygreen}{rgb}{0,0.6,0}  
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82} 
+\definecolor{background}{rgb}{0.963,0.963,0.963}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+\newcommand{\hwnum}{3}
+\newcommand{\duedate}{11:59pm, November 9th}
+
+%\notesheader
+\hwheader   % header for homework
+%\hwslnheader   % header for homework solutions
+
+% Comment the following line in order to hide solutions.
+% Uncomment the line to show solutions written inside of
+% LaTeX solution environments like:
+%   \begin{solution}
+%     My solution.
+%   \end{solution}.
+\printanswers
+
+\begin{document}
+\setlength{\parindent}{0pt}
+\section*{Before you start:}
+
+\subsection*{Homework Files}
+You can download the starter files for coding as well as this \textit{tex} file (you only need to modify \textit{homework3.tex}) on canvas and do your homework with latex. Or you can scan your handwriting, convert to pdf file, and upload it to canvas before the due date. If you choose to write down your answers by hand, you can directly download the pdf file on canvas which provides more blank space for solution box.\\
+
+\subsection*{Submission Form}
+For homework 3, there are only one part of submission, which is a pdf file as your solution named as VE281\_HW3\_[Your Student ID]\_[Your name].pdf uploaded to canvas.
+
+Estimated time used for this homework: \textbf{3-4 hours.}
+\\\\
+Great credits to 2020FA VE281 TA Group and enormous thanks to 2021SU VE281 TA Roihn!!!
+
+\newpage
+\section*{0\quad Student Info (0 point)}
+Your name and student id:
+\begin{solution}
+% Write your answer here
+\end{solution}
+
+\section{Tree Traversal (27 points)}
+
+\subsection{Given A Tree (16 points)}
+Given a binary tree below, please write out the following traversals:
+\begin{figure}[H]
+\centering
+\includegraphics[width=.5\linewidth]{binary_tree.png}
+\end{figure}
+\begin{enumerate}[(a)]
+\item Pre-order depth-first traversal. (4 points)
+\begin{solution}
+%Write your answer here.
+\end{solution}
+
+\item Post-order depth-first traversal. (4 points)
+\begin{solution}
+%Write your answer here.
+\end{solution}
+
+\item In-order depth-first traversal. (4 points)
+\begin{solution}
+%Write your answer here.
+\end{solution}
+
+\item Level-order traversal. (4 points)
+\begin{solution}
+%Write your answer here.
+\end{solution}
+
+\end{enumerate}
+
+
+\subsection{Draw The Tree (11 points)}
+\begin{enumerate}[a)]
+\item Now we have a specific binary tree, but we only know some of its traversals. Its pre-order traversal is: \textbf{FBADCEGIH}, and its in-order traversal is: \textbf{ABCDEFGHI}. Then please \textbf{draw out the binary tree} and show its \textbf{post-order traversal}. (4 points)
+
+\begin{solution}
+%Write your answer here.
+\end{solution}
+
+\item Now we have a specific binary tree, but we only know some of its traversals. Its post-order traversal is: \textbf{FEKLJIHG}, and its in-order traversal is: \textbf{EFGHIKJL}. Then please \textbf{draw out the binary tree} and show its \textbf{pre-order traversal}. (4 points)
+
+\begin{solution}
+%Write your answer here.
+\end{solution}
+
+\item Now students are required to draw out the binary tree according to the given traversals: Its pre-order traversal is: \textbf{ACDFGEB}, and its post-order traversal is: \textbf{DCEBGFA}. Then please \textbf{draw out the binary tree} and show its \textbf{pre-order traversal}.
+
+William and Coned both provide their plot of the unknown trees. 
+\begin{figure}[H]
+\centering
+\includegraphics[width=.8\linewidth]{Coned_vs_William.png}
+\end{figure}
+
+Their answers are totally different, but seem to be both correct. Can you explain why such a case happens? (3 points)
+
+\begin{solution}
+%Write your answer here.
+\end{solution}
+
+\end{enumerate}
+
+
+\section{True or False (20 points)}
+Please judge whether the following statements are \textbf{TRUE} or \textbf{FALSE}. You can briefly state your reason if you would like to get partial points. No deduction if the solution is right without explanation. Each question takes 2 points.
+	\begin{enumerate}[a)]
+		\item A complete tree is a tree where every node has either 0 or 2 children.
+		\begin{solution}
+%Write your answer here.
+\end{solution}
+		\item A complete tree is a tree where every level except the last is necessarily filled, and in the last level, nodes are filled in from left to right.
+\begin{solution}
+%Write your answer here.
+\end{solution}
+		\item Heapsort has worst-case $\Theta(n \log n)$ time complexity.
+		\begin{solution}
+%Write your answer here.
+\end{solution}
+		\item  Percolate-up has an average-case time complexity of $\Theta(\log n)$.
+\begin{solution}
+%Write your answer here.
+\end{solution}
+		\item Dequeue is done by simply removing the root.
+\begin{solution}
+%Write your answer here.
+\end{solution}
+		\item Enqueue in a min-heap is done by inserting the element at the end, and then calling percolate-up.
+\begin{solution}
+%Write your answer here.
+\end{solution}
+		\item $[1, 13, 17, 23, 14, 16, 20, 35]$ is a representation of a min-heap.
+\begin{solution}
+%Write your answer here.
+\end{solution}
+		\item $[83, 47, 9, 22, 15, 7, 1, 20]$ is a representation of a \textbf{max-heap}.
+\begin{solution}
+%Write your answer here.
+\end{solution}
+		\item  Proceeding from the bottom of the heap to the top, while repeatedly calling percolateDown() can initialize a min-heap.
+\begin{solution}
+%Write your answer here.
+\end{solution}
+		\item Proceeding from the top of the heap to the bottom, while repeatedly calling percolateUp() can not initialize a min-heap.
+		\begin{solution}
+%Write your answer here.
+\end{solution}
+	\end{enumerate}
+
+\section{Min Heap (23 points)}
+Consider a min-heap represented by the following array:
+\begin{align*}
+\{2, 3, 8, 16, 46, 34, 42, 35, 26\}
+\end{align*}
+
+Perform the following operations using the algorithms for binary heaps discussed in lecture. Ensure that the heap property is restored at the end of every individual operation.
+
+For the following operations, tell how many percolations(either up or down) are needed and show the result of the heap after each \textbf{percolation} in either tree form or array form. 
+
+\begin{enumerate}[a)]
+\item Push the value of 1 into this min-heap. (4 points)
+\begin{solution}
+%Write your answer here.
+\end{solution}
+
+\item After a), push the value of 5 into this min-heap. (4 points)
+\begin{solution}
+%Write your answer here.
+\end{solution}
+
+\item After b), update element 2 to have a value of 37 (Suppose you have the access to each element). (5 points)
+\begin{solution}
+%Write your answer here.
+\end{solution}
+
+\item After c), remove the min element from the heap. (5 points)
+\begin{solution}
+%Write your answer here.
+\end{solution}
+
+\item After d), update element 26 to have a value of 4 (Suppose you have the access to each element) (5 points)
+\begin{solution}
+%Write your answer here.
+\end{solution}
+
+\end{enumerate}
+
+\section{Binary Search Tree (30 points)}
+\subsection{Simple simulation (16 points)}
+
+Perform the following operations to construct a binary search tree. Show the result of the BST after each operation in either tree form or array form.
+
+\begin{enumerate}[a)]
+\item Insert 24, 29, 22, 25, 19, 32, 15, 37 (3 points)
+\begin{solution}
+%Write your answer here.
+\end{solution}
+
+\item Delete 22 (3 points)
+\begin{solution}
+%Write your answer here.
+\end{solution}
+
+\item Delete 29 (3 points)
+\begin{solution}
+%Write your answer here.
+\end{solution}
+
+\item Insert 22 (3 points)
+\begin{solution}
+%Write your answer here.
+\end{solution}
+
+\item What is the in-order predecessor of node 25? What is the in-order successor of node 32? (4 points)
+\begin{solution}
+%Write your answer here.
+\end{solution}
+
+
+\end{enumerate}
+
+\subsection{Better than linear selection? (14 points)}
+After learning the application of the BST, Coned thinks that with BST, rank search can be done either in a faster way or with less space compared with the linear selection algorithms introduced in the lecture.
+\begin{enumerate}[a)]
+    \item Compare BST rank search with deterministic selection algorithm in terms of time complexity and space usage. Assume that for each node, a variable \textit{leftsize} is maintained as introduced in the lecture. (8 points)
+    \begin{solution}
+    %Write your answer here.
+    \end{solution}
+    \item William, our master of algorithm, has a different idea again. He states that for the linear selection algorithm, the input can be arbitrary array while for BST rank search, you have to first build up a binary search tree from the arbitrary array, which will also take some time. Therefore, the average time complexity of BST rank search is not better than $O(n)$. Is he right? (6 points)\\
+    Assume that we are working on a fixed array and doing lots of rank search.
+    \begin{solution}
+    %Write your answer here.
+    \end{solution}
+\end{enumerate}
+
+\section*{Reference}
+Assignment 3, VE281, FA2020, UMJI-SJTU.
+
+Homework 2, VE281, SU2021, UMJI-SJTU.
+
+\end{document}

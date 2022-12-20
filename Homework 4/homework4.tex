@@ -1,0 +1,238 @@
+\documentclass[11pt]{exam}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts, amsmath, amssymb, amsthm}
+\usepackage{mathtools}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{colortbl}
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+
+% in order to compile this file you need to get 'header.tex' from
+% Canvas and change the line below to the appropriate file path
+\input{header}
+
+\geometry{left=2.5 cm,right=2.5 cm,top=2.5 cm,bottom=2.5 cm}
+%\pagestyle{fancy}
+\definecolor{mygreen}{rgb}{0,0.6,0}  
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82} 
+\definecolor{background}{rgb}{0.963,0.963,0.963}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+\newcommand{\hwnum}{4}
+\newcommand{\duedate}{11:59pm, November 25th}
+
+%\notesheader
+\hwheader   % header for homework
+%\hwslnheader   % header for homework solutions
+
+% Comment the following line in order to hide solutions.
+% Uncomment the line to show solutions written inside of
+% LaTeX solution environments like:
+%   \begin{solution}
+%     My solution.
+%   \end{solution}.
+\printanswers
+
+\begin{document}
+\setlength{\parindent}{0pt}
+\section*{Before you start:}
+
+\subsection*{Homework Files}
+You can download the starter files for coding as well as this \textit{tex} file (you only need to modify \textit{homework4.tex}) on canvas and do your homework with latex. Or you can scan your handwriting, convert to pdf file, and upload it to canvas before the due date. If you choose to write down your answers by hand, you can directly download the pdf file on canvas which provides more blank space for solution box.\\
+
+\subsection*{Submission Form}
+For homework 4, there are only one part of submission, which is a pdf file as your solution named as VE281\_HW4\_[Your Student ID]\_[Your name].pdf uploaded to canvas.
+
+Estimated time used for this homework: \textbf{4-5 hours.}
+\\\\
+Great credits to 2020FA VE281 TA Group and enormous thanks to 2021SU VE281 TA Roihn!!!
+
+\newpage
+\section*{0\quad Student Info (0 point)}
+Your name and student id:
+\begin{solution}
+% Write your answer here
+\end{solution}
+
+\section{Graph and Graph Search (20 points)}
+No explanation is needed in this section.
+\subsection{Possible Node Sequence (4 points)}
+    Suppose that we have an undirected graph $G=(V,E)$, where
+    \begin{itemize}
+        \item $V=\{a,b,c,d,e\}$
+        \item $E = \{(a, b), (a, e), (a, c), (b, e), (c, f), (f, d), (e, d)\}$
+    \end{itemize}
+    If we perform a DFS from node a, which of the following could be a possible node sequence?
+    \begin{enumerate}[A.]
+        \item a, b, e, c, d, f
+        \item a, c, f, e, b ,d
+        \item a, e, b, c, f ,d
+        \item a, e, d, f, c, b
+    \end{enumerate}
+    \begin{solution}
+    % Write your solution here
+    \end{solution}
+\subsection{Tree and Graph (4 points)}
+    After learning about the concept of graph, you can know that tree can be represented by an acyclic directed graph. Comparing tree with such representation and other kinds of directed graph, which of the following is right?
+    \begin{enumerate}[A.]
+        \item A node in \textbf{a tree} could have multiple parents
+        \item A node in \textbf{a directed graph} could have multiple predecessors
+        \item A node in \textbf{a tree} could \textbf{NOT} have multiple children
+        \item A node in \textbf{a directed graph} could \textbf{NOT} have multiple successors
+    \end{enumerate}
+    Hint: If there exists an edge from node u to node $v$ in a directed graph, we then call $u$ the predecessor of $v$, and call $v$ the successor of $u$.
+    \begin{solution}
+    % Write your solution here
+    \end{solution}
+\subsection{DFS with Stack (12 points)}
+    In the class, we only talk about how to implement DFS by recursion. We now want to implement the DFS in an iterative way, with the help of \textbf{stack}.
+    \newline
+    \newline
+    Suppose we are traversing \textbf{a connected directed graph with adjacency list representation} and please fill in the blanks in the following procedure:
+    \begin{algorithm}
+        \caption{Algorithm to implement DFS with iteration}
+        \begin{algorithmic}[1]
+            \STATE Put the start node into the stack.
+            \WHILE{\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
+                \STATE Take the top node v in the stack and remove it.
+                \STATE Mark v as visited.
+                \FOR{\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
+                    \IF{\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
+                        \STATE \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+                    \ENDIF
+                \ENDFOR
+            \ENDWHILE
+        \end{algorithmic}
+    \end{algorithm}
+
+\section{Minimum Spanning Tree (34 points)}
+\subsection{MST Basics (10 points)}
+\begin{enumerate}[1)]
+    \item Discuss about the optimal strategy to find the smallest $D(v)$ (use linear scan or maintain a binary heap) in different graphs in terms of graph density. (4 points)
+    \begin{solution}
+    % Write your solution here.
+    \end{solution}
+    \item Does Prim's algorithm still work well when the graph is negatively weighted? If not, give a counterexample. If yes, briefly state the reason and propose a kind of graph to which Prim's algorithm can not be applied. No graph needs to be drawn here. (6 points)
+    \begin{solution}
+    % Write your solution here.
+    \end{solution}
+\end{enumerate}
+\subsection{Maixmum Spanning Tree? (24 points)}
+Suppose that in a town somewhere on the Earth, there are totally 10 bus stops, represented by the nodes in Fig.\ref{fig:bus_stop}. Each indicates that there is a route between those two bus stops, with \textbf{passenger flow on the route} marked on each edge.\\
+However, due to COVID-19, the government is faced with serious financial crisis and cannot afford to maintain so many routes any more. They plan to keep all the bus stops but \textbf{there should be one and only be one single path between any of them}, \textbf{maximizing} the total passenger flow.
+\begin{enumerate}[1)]
+    \item Draw the new bus transportation system. Start with node 1 and show intermediate results. (14 points)
+    \begin{solution}
+    % Write your solution here
+    \end{solution}
+    \item With the pandemic continuing, the situation becomes worse and the government decides to close bus stop 1. In other words, node 1 will be deleted from the graph. To maintain the property that there should be one and only be one single path between any of the bus stops, what will the system look like after the closure of that bus stop? (6 points)
+    \begin{solution}
+    % Write your solution here
+    \end{solution}
+    \item Is it necessary to run the Prim's algorithm from the very beginning again when some nodes are deleted? Give your explanation. (4 points)
+    \begin{solution}
+    % Write your solution here
+    \end{solution}
+\end{enumerate}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.3]{bus_stop_graph.png}
+    \caption{Bus stop graph}
+    \label{fig:bus_stop}
+\end{figure}
+\newpage
+\section{Topological Sorting (30 points)}
+    \begin{enumerate}[1)]
+        \item After learning about the graph search algorithms and topological sorting, Coned thinks that their implementation can be very similar, especially for BFS. State how they are similar and write the pseudo code of implementing topological sorting with BFS. (12 points)
+        \begin{solution}
+        % Write your solution here
+        \end{solution}
+        \item In the lecture, the topological sorting algorithm is based on an array $in-degree$, which is probably of $int$ type. Our master of algorithm William argues that without $in-degree$, we can also implement topological sorting by using DFS, with an array $visited$. Complete the following pseudo code provided by William: (12 points)
+        \begin{algorithm}[htbp]
+            \caption{Algorithm to implement topological sorting with DFS}
+            \begin{algorithmic}[1]
+                \STATE \textbf{Input:} an adjacency list representing the graph
+                \STATE \textbf{Output:} a stack with the topologically sorted nodes.
+                \STATE Create a stack $S$ and a boolean array $visited[]$ initialized with false.
+                \FOR{each node $v$ in the graph}
+                    \STATE dfs\_helper($v$, $visited$, $S$)
+                \ENDFOR
+                \newline
+                \newline
+                \STATE dfs\_helper($v$, $visited$, $S$):
+                \STATE // add codes here \textbf{if necessary}
+                \newline
+                \newline
+                \newline
+                \FOR{each node $u$ adjacent to $v$ }
+                \STATE // add codes here
+                \newline
+                \newline
+                \newline
+                \ENDFOR
+                \STATE // add codes here \textbf{if necessary}
+                \newline
+                \newline
+                \newline
+            \end{algorithmic}
+        \end{algorithm}
+        \item Briefly state the difference between BFS and DFS implementation of topological sorting. (6 points)
+        \begin{solution}
+        % Write your solution here.
+        \end{solution}
+    \end{enumerate}
+\section{Shortest Path (16 points)}
+\subsection{True or False (4 points each)}
+If you think the statement is right, briefly explain your reason. If not, give a counterexample.
+\begin{enumerate}[1)]
+    \item We can always find the shortest path between two nodes in either direct or indirect graph.
+    \begin{solution}
+    % Write your answer here
+    \end{solution}
+    \item We can always find the shortest path between two nodes in the minimum spanning tree in a graph.
+    \begin{solution}
+    % Write your answer here
+    \end{solution}
+    \item We can use BFS to find the shortest path in all the graphs without negative weight.
+    \begin{solution}
+    % Write your answer here
+    \end{solution}
+    \item Shortest path between two nodes is unique in a graph, just like the path between two nodes is unique in a binary tree.
+    \begin{solution}
+    % Write your answer here
+    \end{solution}
+\end{enumerate}
+
+\section*{Reference}
+
+No past assignment reference this time.
+
+\end{document}
