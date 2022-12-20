@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/junsi/Desktop/VE281/project/p4/proj4/main.cpp
+shortestP2P.hpp
+/Users/junsi/Desktop/VE281/project/p4/proj4/shortestP2P.hpp
+
+/Users/junsi/Desktop/VE281/project/p4/proj4/shortestP2P.hpp
+iostream
+-
+list
+-
+vector
+-
+climits
+-
+
