@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/junsi/Desktop/VE281/project/p1/proj1/main.cpp
+sort.hpp
+/Users/junsi/Desktop/VE281/project/p1/proj1/sort.hpp
+iostream
+-
+vector
+-
+
+/Users/junsi/Desktop/VE281/project/p1/proj1/sort.hpp
+vector
+-
+stdlib.h
+-
+functional
+-
+
